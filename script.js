@@ -142,7 +142,7 @@ function showReview(index) {
 
     reviews.forEach((review, i) => {
 
-        review.style.display = i === index ? "block" : "none";
+        review.style.display = i === index ? "flex" : "none";
 
     });
 
