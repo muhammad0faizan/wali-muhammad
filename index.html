@@ -43,6 +43,8 @@
 
                 <li><a href="#about">About</a></li>
 
+                <li><a href="#preorder">Pre-Order</a></li>
+
                 <li><a href="#reviews">Reviews</a></li>
 
                 <li><a href="#author">Author</a></li>
@@ -113,16 +115,78 @@
 
     </section>
 
-    <section id="reviews">
-        
-        <h2>Reader Reviews</h2>
-            
-            <div class="review">
+    <section id="preorder">
 
-                <a href="https://www.instagram.com/i.am.muhammad_faizan?igsh=MTkzdGc2MGJzYjNxeg%3D%3D&utm_source=qr"
-                    target="_blank">Click Here to view the reviews</a>
+        <h2>Pre-Order Your Signed Copy</h2>
+
+        <p class="preorder-text">
+            Fill out the form below to reserve your signed copy of
+            <strong>Wali Muhammad</strong>.
+        </p>
+
+        <form id="preorderForm">
+
+            <input type="text" id="fullName" placeholder="Full Name" required>
+
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+
+            <textarea id="address" placeholder="Complete Address" rows="4" required></textarea>
+
+            <button type="submit" class="btn">
+                Submit Pre-Order
+            </button>
+
+        </form>
+
+        <div id="successBox" style="display:none;">
+
+            <h3>
+                ✅ Your order has been registered successfully.
+            </h3>
+
+            <p>
+
+                <strong>Your Order Code</strong>
+
+            </p>
+
+            <div id="orderCode">
+
+                WM-000000
 
             </div>
+
+            <button id="copyCode" class="btn" type="button">
+                Copy Code
+            </button>
+
+            <p>
+
+                Please save this code and send it to the author on Instagram DM for confirmation.
+
+            </p>
+
+            <a href="https://www.instagram.com/itsmuhammadfaizan_?igsh=MTkzdGc2MGJzYjNxeg%3D%3D&utm_source=qr"
+                target="_blank" class="btn secondary">
+
+                Message the Author on Instagram
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="reviews">
+
+        <h2>Reader Reviews</h2>
+
+        <div class="review">
+
+            <a href="https://www.instagram.com/i.am.muhammad_faizan?igsh=MTkzdGc2MGJzYjNxeg%3D%3D&utm_source=qr"
+                target="_blank">Click Here to view the reviews</a>
+
+        </div>
 
     </section>
 
