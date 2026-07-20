@@ -366,6 +366,13 @@ footer a:hover {
 
 @media(max-width:900px) {
 
+
+    .review {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
     .hero {
 
         flex-direction: column-reverse;
@@ -427,6 +434,14 @@ footer a:hover {
         font-size: 38px;
 
     }
+
+
+.review {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
     .hero-left p {
 
