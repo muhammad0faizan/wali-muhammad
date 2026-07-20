@@ -134,39 +134,39 @@ topBtn.onclick = () => {
 
 // Review Slider
 
-const reviews = document.querySelectorAll(".review");
+// const reviews = document.querySelectorAll(".review");
 
-let current = 0;
+// let current = 0;
 
-function showReview(index) {
+// function showReview(index) {
 
-    reviews.forEach((review, i) => {
+//     reviews.forEach((review, i) => {
 
-        review.style.display = i === index ? "flex" : "none";
+//         review.style.display = i === index ? "flex" : "none";
 
-    });
+//     });
 
-}
+// }
 
-if (reviews.length > 0) {
+// if (reviews.length > 0) {
 
-    showReview(0);
+//     showReview(0);
 
-    setInterval(() => {
+//     setInterval(() => {
 
-        current++;
+//         current++;
 
-        if (current >= reviews.length) {
+//         if (current >= reviews.length) {
 
-            current = 0;
+//             current = 0;
 
-        }
+//         }
 
-        showReview(current);
+//         showReview(current);
 
-    }, 4000);
+//     }, 4000);
 
-}
+// }
 
 
 // Active Menu
