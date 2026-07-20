@@ -366,6 +366,7 @@ footer a:hover {
 
 @media(max-width:900px) {
 
+
 .review {
     display: flex;
     justify-content: center;
@@ -433,18 +434,7 @@ footer a:hover {
 }
 
 @media(max-width:500px) {
-.review {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    width: 80vw;
-    padding: 28px;
-    margin: 20px auto;
-    background: #474444;
-    border-radius: 18px;
-    border: 2px solid rgb(46, 43, 43);
-}
     .hero-left h1 {
 
         font-size: 38px;
