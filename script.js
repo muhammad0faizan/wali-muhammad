@@ -142,7 +142,7 @@ topBtn.onclick = () => {
 
 //     reviews.forEach((review, i) => {
 
-//         review.style.display = i === index ? "flex" : "none";
+//         review.style.display = i === index ? "block" : "none";
 
 //     });
 
@@ -231,3 +231,125 @@ rotateX(${y}deg)`;
 
 console.log("%cWali Muhammad", "font-size:30px;color:white;background:black;padding:10px;");
 console.log("Designed by Muhammad Faizan");
+
+// ===============================
+// PRE-ORDER SYSTEM
+// ===============================
+
+// EmailJS SDK load (اگر HTML میں شامل نہیں کیا)
+const emailScript = document.createElement("script");
+emailScript.src =
+    "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+document.head.appendChild(emailScript);
+
+emailScript.onload = () => {
+
+    // یہاں بعد میں اپنی Public Key لکھیں
+    emailjs.init({
+        publicKey: "SDBPZsZe3CxpRVrJ"
+    });
+
+};
+
+const form = document.getElementById("preorderForm");
+
+if (form) {
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("fullName").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const address = document.getElementById("address").value.trim();
+
+        if (!name || !phone || !address) {
+
+            alert("Please fill all fields.");
+
+            return;
+
+        }
+
+        // Generate Random Order Code
+
+        const orderCode =
+            "WM-" +
+            Math.floor(100000 + Math.random() * 900000);
+
+        document.getElementById("orderCode").innerText = orderCode;
+
+        document.getElementById("successBox").style.display = "block";
+
+        document
+            .getElementById("successBox")
+            .scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        // EmailJS
+
+        emailjs.send(
+
+            "service_7j78pdk",
+
+            "template_zczbuna",
+
+            {
+
+                customer_name: name,
+
+                customer_phone: phone,
+
+                customer_address: address,
+
+                order_code: orderCode
+
+            }
+
+        ).then(() => {
+
+            console.log("Email Sent");
+
+        }).catch((err) => {
+
+            console.log(err);
+
+            alert("Email could not be sent.");
+
+        });
+
+        this.reset();
+
+    });
+
+}
+
+// ===============================
+// COPY ORDER CODE
+// ===============================
+
+const copyBtn = document.getElementById("copyCode");
+
+if (copyBtn) {
+
+    copyBtn.addEventListener("click", function () {
+
+        const code =
+            document.getElementById("orderCode").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        this.innerText = "✅ Copied";
+
+        setTimeout(() => {
+
+            this.innerText = "Copy Code";
+
+        }, 2000);
+
+    });
+
+}
