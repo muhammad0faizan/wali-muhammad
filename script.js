@@ -246,7 +246,7 @@ emailScript.onload = () => {
 
     // یہاں بعد میں اپنی Public Key لکھیں
     emailjs.init({
-        publicKey: "SDBPZsZe3CxpRVrJ"
+        publicKey: "-SDBPZsZe3CxpRVrJ"
     });
 
 };
